@@ -1,1 +1,5 @@
 sections/node_modules
+sections/.env
+
+sections/src/controllers/annotation.txt
+sections/src/models/annotation.txt
