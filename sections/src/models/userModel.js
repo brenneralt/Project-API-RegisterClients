@@ -2,6 +2,7 @@ const connection = require('./connection')
 
 const listarTodos = async() => {
  const clientes = await connection.execute('SELECT * FROM clientes')
+    return clientes
 }
 const buscarPorID = () => {
 

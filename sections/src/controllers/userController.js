@@ -1,5 +1,8 @@
-const listarTodos = (req, res) => {
-    return res.status(200).json({ message:'userController está tudo certo'})
+const tasksModel = require('../models/userModel')
+
+const listarTodos = async (req, res) => {
+    const users = await tasksModel.listarTodos();
+    return res.status(200).json(users1)
 }
 const buscarPorID = () => {
    
