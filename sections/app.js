@@ -6,11 +6,10 @@ const User = require('./src/models/User')
 const porta = 3333
 
 app.use(express.json());
-
-app.get('/clientes', async (req, res) => {
-    res.send("Página Inicial")
-    res.json(res.body)
-})
+app.get('/users', async (req, res) => {
+    const users = await User.findAll();
+    res.status(200).json(users);
+  });
 app.post('/cadastrar', async (req, res) => {
     console.log(req.body);
 
